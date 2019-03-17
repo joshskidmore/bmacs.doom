@@ -1,6 +1,6 @@
 ;;; private/gilbertw1/config.el -*- lexical-binding: t; -*-
 
-(setq doom-font (font-spec :family "Iosevka" :size 24))
+(setq doom-font (font-spec :family "SF Mono" :size 24))
 
 ;; disable double buffering to prevent stuttering
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
