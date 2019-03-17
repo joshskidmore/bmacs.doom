@@ -48,3 +48,6 @@
 
 ;; turn on company auto completion
 (setq company-idle-delay 0.1)
+
+;; theme
+(setq doom-theme 'doom-molokai)
