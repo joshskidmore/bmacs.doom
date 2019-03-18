@@ -51,8 +51,8 @@
 
 ;; black background
 (custom-set-faces
-  '(default                 ((t (:background "#000000"))))
-  '(solaire-default-face    ((t (:background "#000000")))))
+  '(default                 ((t (:background "#0c0c0c"))))
+  '(solaire-default-face    ((t (:background "#0c0c0c")))))
 
 ;; theme
 (setq doom-theme 'doom-peacock)
