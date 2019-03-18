@@ -49,5 +49,11 @@
 ;; turn on company auto completion
 (setq company-idle-delay 0.1)
 
+;; black background
+(custom-set-faces
+  '(default                 ((t (:background "#000000"))))
+  '(solaire-default-face    ((t (:background "#000000")))))
+
 ;; theme
-(setq doom-theme 'doom-molokai)
+(setq doom-theme 'doom-peacock)
+
