@@ -245,7 +245,7 @@
         :desc "Rename current file"            "R" #'bmacs/rename-current-buffer-file
         :desc "Save buffer"                    "s" #'save-buffer
         :desc "Save all buffers"               "S" #'evil-write-all
-        :desc "Neotree toggle"                 "t" #'treemacs/toggle
+        :desc "Neotree toggle"                 "t" #'+treemacs/toggle
         :desc "Sudo find file"                 "u" #'doom/sudo-find-file
         :desc "Sudo edit this file"            "U" #'doom/sudo-this-file
         :desc "Cleanup this tramp conn"        "x" #'tramp-cleanup-this-connection
@@ -556,7 +556,12 @@
 ;; Editor
 (map!
  :nv "C-SPC" #'+fold/toggle
+ :nv "S-SPC" #'hs-hide-level
+ :nv "C-S-SPC" #'hs-show-all
  :n "gQ"    #'+format:region
+ :nv [C-backspace] #'+fold/toggle
+ :nv [S-backspace] #'hs-hide-level
+ :nv [C-S-backspace] #'hs-show-all
 
  ;; evil-mc
  (:prefix "gz"
