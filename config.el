@@ -1,6 +1,6 @@
 ;;; private/gilbertw1/config.el -*- lexical-binding: t; -*-
 
-(setq doom-font (font-spec :family "SF Mono" :size 24))
+(setq doom-font (font-spec :family "SF Mono" :size 23))
 
 ;; disable double buffering to prevent stuttering
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
@@ -47,7 +47,7 @@
   '(company-dabbrev-code company-capf company-keywords company-files company-dabbrev))
 
 ;; turn on company auto completion
-(setq company-idle-delay 0.1)
+(setq company-idle-delay 0.4)
 
 ;; black background
 (custom-set-faces
