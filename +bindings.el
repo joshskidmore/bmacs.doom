@@ -505,7 +505,9 @@
         "C-f"    #'forward-word
         "C-o"    #'ivy-dispatching-done
         "C-l"    #'ivy-alt-done
-        "C-v"    #'yank)
+        "C-v"    #'yank
+        :map ivy-switch-buffer-map
+        "C-k"    #'ivy-previous-line)
       (:after counsel
         :map counsel-ag-map
         "C-SPC"    #'ivy-call-and-recenter ; preview
