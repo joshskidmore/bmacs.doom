@@ -9,6 +9,7 @@
 (load! "+hydra.el")
 (load! "+bindings.el")
 (load! "+banner.el")
+(load! "+misc.el")
                                         ;
 ;; avy use all windows
 (setq avy-all-windows t)
