@@ -2,3 +2,4 @@
 ;;; private/gilbertw1/packages.el
 
 (package! evil-iedit-state)
+(package! evil-commentary)

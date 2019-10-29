@@ -1,6 +1,6 @@
 ;;; private/gilbertw1/config.el -*- lexical-binding: t; -*-
 
-(setq doom-font (font-spec :family "SF Mono" :size 23))
+(setq doom-font (font-spec :family "SF Mono" :size 20))
 
 ;; disable double buffering to prevent stuttering
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
@@ -10,7 +10,13 @@
 (load! "+bindings.el")
 (load! "+banner.el")
 (load! "+misc.el")
-                                        ;
+
+(defvar host (substring (shell-command-to-string "hostname") 0 -1))
+(defvar host-config (concat "~/.doom.d/hosts/" host ".el"))
+
+(if (file-exists-p host-config)
+  (load! host-config))
+
 ;; avy use all windows
 (setq avy-all-windows t)
 
