@@ -87,20 +87,21 @@
                            (setq js-indent-level 2
                                  doom-inhibit-indent-detection t)))
 
-; (use-package counsel-dash
-;   :commands (counsel-dash counsel-dash-install-docset)
-;   :init
-;   ;; Language Hooks
-;   (add-hook 'emacs-lisp-mode-hook (lambda () (setq-local counsel-dash-docsets '("Emacs Lisp"))))
-;   (add-hook 'scala-mode-hook (lambda () (setq-local counsel-dash-docsets '("Scala" "Akka" "Play_Scala" "Java"))))
-;   (add-hook 'java-mode-hook (lambda () (setq-local counsel-dash-docsets '("Java" "Play_Java"))))
-;   (add-hook 'rust-mode-hook (lambda () (setq-local counsel-dash-docsets '("Rust"))))
-;   (add-hook 'clojure-mode-hook (lambda () (setq-local counsel-dash-docsets '("Clojure"))))
-;   (add-hook 'haskell-mode-hook (lambda () (setq-local counsel-dash-docsets '("Haskell"))))
-;   (add-hook 'sh-mode-hook (lambda () (setq-local counsel-dash-docsets '("Bash"))))
-;   (add-hook 'c-mode-hook (lambda () (setq-local counsel-dash-docsets '("C"))))
-;   (add-hook 'c++-mode-hook (lambda () (setq-local counsel-dash-docsets '("C++"))))
-;   (add-hook 'js2-mode-hook (lambda () (setq-local counsel-dash-docsets '("JavaScript" "NodeJS" "AWS_JavaScript" "Lo-Dash"))))
-;   (add-hook 'js-mode-hook (lambda () (setq-local counsel-dash-docsets '("JavaScript" "NodeJS" "AWS_JavaScript" "Lo-Dash"))))
-;   (add-hook 'html-mode-hook (lambda () (setq-local counsel-dash-docsets '("HTML" "JavaScript"))))
-;   (add-hook 'python-mode-hook (lambda () (setq-local counsel-dash-docsets '("Python 3")))))
+
+(use-package counsel-dash
+  :commands (counsel-dash counsel-dash-install-docset)
+  :init
+  ;; Language Hooks
+  (add-hook 'emacs-lisp-mode-hook (lambda () (setq-local counsel-dash-docsets '("Emacs Lisp"))))
+  (add-hook 'scala-mode-hook (lambda () (setq-local counsel-dash-docsets '("Scala" "Akka" "Play_Scala" "Java"))))
+  (add-hook 'java-mode-hook (lambda () (setq-local counsel-dash-docsets '("Java" "Play_Java"))))
+  (add-hook 'rust-mode-hook (lambda () (setq-local counsel-dash-docsets '("Rust"))))
+  (add-hook 'clojure-mode-hook (lambda () (setq-local counsel-dash-docsets '("Clojure"))))
+  (add-hook 'haskell-mode-hook (lambda () (setq-local counsel-dash-docsets '("Haskell"))))
+  (add-hook 'sh-mode-hook (lambda () (setq-local counsel-dash-docsets '("Bash"))))
+  (add-hook 'c-mode-hook (lambda () (setq-local counsel-dash-docsets '("C"))))
+  (add-hook 'c++-mode-hook (lambda () (setq-local counsel-dash-docsets '("C++"))))
+  ; (add-hook 'js2-mode-hook (lambda () (setq-local counsel-dash-docsets '("React", "NodeJS", "JavaScript"))))
+  ; (add-hook 'js-mode-hook (lambda () (setq-local counsel-dash-docsets '("JavaScript" "NodeJS" "React", "AWS_JavaScript" "Lo-Dash"))))
+  (add-hook 'html-mode-hook (lambda () (setq-local counsel-dash-docsets '("HTML" "JavaScript"))))
+  (add-hook 'python-mode-hook (lambda () (setq-local counsel-dash-docsets '("Python 3")))))

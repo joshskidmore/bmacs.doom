@@ -3,26 +3,20 @@
 
 (doom! :feature
        ;;debugger          ; FIXME stepping through code, to help you add bugs
-       eval              ; run code, run (also, repls)
-       (evil +everywhere); come to the dark side, we have cookies
-       file-templates    ; auto-snippets for empty files
-       (lookup           ; helps you navigate your code and documentation
-        +docsets)        ; ...or in Dash docsets locally
-       snippets          ; my elves. They type so I don't have to
-       workspaces        ; tab emulation, persistence & separate workspaces
 
        :completion
        company           ; the ultimate code completion backend
        ;;helm             ; the *other* search engine for love and life
        ;;ido              ; the other *other* search engine...
-       ivy              ; a search engine for love and life
+       ivy               ; a search engine for love and life
 
        :ui
+       workspaces        ; tab emulation, persistence & separate workspaces
+       ophints           ; display visual hints when editing in evil
        deft              ; notational velocity for Emacs
        doom              ; what makes DOOM look the way it does
        doom-dashboard    ; a nifty splash screen for Emacs
        doom-quit         ; DOOM quit-message prompts when you quit Emacs
-       evil-goggles      ; display visual hints when editing in evil
        ;;fci               ; a `fill-column' indicator
        hl-todo           ; highlight TODO/FIXME/NOTE tags
        indent-guides     ; highlighted indent columns
@@ -41,6 +35,9 @@
        window-select     ; visually switch windows
 
        :editor
+       (evil +everywhere); come to the dark side, we have cookies
+       file-templates    ; auto-snippets for empty files
+       snippets          ; my elves. They type so I don't have to
        fold              ; (nigh) universal code folding
        ;;(format +onsave)  ; automated prettiness
        ;;lispy             ; vim for lisp, for people who dont like vim
@@ -54,12 +51,17 @@
        ;;+icons          ; colorful icons for dired-mode
         )
        electric          ; smarter, keyword-based electric-indent
-       eshell            ; a consistent, cross-platform shell (WIP)
-       imenu             ; an imenu sidebar and searchable code index
-       term              ; terminals in Emacs
+       ;;imenu             ; an imenu sidebar and searchable code index
        vc                ; version-control and Emacs, sitting in a tree
 
+       :term
+       eshell            ; a consistent, cross-platform shell (WIP)
+       term              ; terminals in Emacs
+
        :tools
+       eval              ; run code, run (also, repls)
+       (lookup           ; helps you navigate your code and documentation
+        +docsets)        ; ...or in Dash docsets locally
        ;;ansible
        ;;docker
        editorconfig      ; let someone else argue about tabs vs spaces
@@ -88,7 +90,7 @@
        common-lisp       ; if you've seen one lisp, you've seen them all
        ;;coq               ; proofs-as-programs
        ;;crystal           ; ruby at the speed of c
-       csharp            ; unity, .NET, and mono shenanigans
+       ; csharp            ; unity, .NET, and mono shenanigans
        data              ; config/data formats
        erlang            ; an elegant language for a more civilized age
        ;;elixir            ; erlang done right
@@ -146,7 +148,7 @@
 
        :collab
        ;;floobits          ; peer programming for a price
-       impatient-mode    ; show off code over HTTP
+       ;;impatient-mode    ; show off code over HTTP
 
        :config
        ;; For literate config users. This will tangle+compile a config.org

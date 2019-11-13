@@ -422,6 +422,8 @@
       :nv "gd" #'+lookup/definition
       :nv "gD" #'+lookup/references
       :nv "gf" #'+lookup/file
+      :nv "gh" #'+lookup/in-docsets
+      :nv "gH" #'+lookup:dash
 
       ;; Snippets
       :i  [C-tab] #'aya-expand
