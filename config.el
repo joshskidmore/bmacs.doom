@@ -105,3 +105,5 @@
   ; (add-hook 'js-mode-hook (lambda () (setq-local counsel-dash-docsets '("JavaScript" "NodeJS" "React", "AWS_JavaScript" "Lo-Dash"))))
   (add-hook 'html-mode-hook (lambda () (setq-local counsel-dash-docsets '("HTML" "JavaScript"))))
   (add-hook 'python-mode-hook (lambda () (setq-local counsel-dash-docsets '("Python 3")))))
+
+(fset 'battery-update #'ignore)

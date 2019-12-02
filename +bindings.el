@@ -185,7 +185,7 @@
       :desc "Switch buffer"           "<"  #'switch-to-buffer
 
       :desc "Search from here"      "?"    #'counsel-rg
-      :desc "Find word in project"  "*"    #'counsel-projectile-rg-region-or-symbol
+      ;:desc "Find word in project"  "*"    #'counsel-projectile-rg-region-or-symbol
       :desc "Toggle last popup"     "~"    #'+popup/toggle
       :desc "Find file"             "."    #'find-file
       :desc "Ace window"            "W"    #'ace-window
@@ -562,7 +562,7 @@
  :nv "C-SPC" #'+fold/toggle
  :nv "S-SPC" #'hs-hide-level
  :nv "C-S-SPC" #'hs-show-all
- :n "gQ"    #'+format:region
+ ;:n "gQ"    #'+format:region
  :nv [C-backspace] #'+fold/toggle
  :nv [S-backspace] #'hs-hide-level
  :nv [C-S-backspace] #'hs-show-all
