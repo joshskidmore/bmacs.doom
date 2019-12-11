@@ -107,3 +107,16 @@
   (add-hook 'python-mode-hook (lambda () (setq-local counsel-dash-docsets '("Python 3")))))
 
 (fset 'battery-update #'ignore)
+
+;; dumb-jump functions
+(defun bmacs/jump-definition (&optional other-window)
+  "Jump to the definition of the symbol at point using `dumb-jump'"
+  (interactive)
+  (evil--jumps-push)
+  (if other-window
+      (dumb-jump-go-other-window)
+    (dumb-jump-go)))
+
+(defun bmacs/jump-definition-other-window ()
+  (interactive)
+  (bmacs/jump-definition t))

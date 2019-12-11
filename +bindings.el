@@ -136,6 +136,8 @@
    :n "n"    #'evilem-motion-search-next
    :n "N"    #'evilem-motion-search-previous
    :n "SPC"  #'avy-goto-char-timer
+   :n "$"    #'avy-goto-end-of-line
+   :n "0"    #'avy-goto-line
    :n "g"    #'evil-goto-first-line)
 
  (:map help-map
@@ -365,7 +367,8 @@
 
       (:prefix ("s" . "search")
         :desc "IEdit mode"                    :nv "e" #'evil-iedit-state/iedit-mode
-        :desc "Swiper search"                 :nv "s" #'swiper)
+        :desc "Swiper search"                 :nv "s" #'swiper
+        :desc "Swiper open buffers"           :nv "a" #'swiper-all)
 
       (:prefix ("t" . "toggle")
         :desc "Flyspell"                     "s" #'flyspell-mode
@@ -421,6 +424,8 @@
       :nv "K"  #'+lookup/documentation
       :nv "gd" #'+lookup/definition
       :nv "gD" #'+lookup/references
+      :nv "g:" #'bmacs/jump-definition
+      :nv "g;" #'bmacs/jump-definition-other-window
       :nv "gf" #'+lookup/file
       :nv "gh" #'+lookup/in-docsets
       :nv "gH" #'+lookup:dash
