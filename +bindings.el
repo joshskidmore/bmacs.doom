@@ -185,6 +185,7 @@
       :desc "Universal argument"      "u"  #'universal-argument
       :desc "Switch workspace buffer" ","  #'persp-switch-to-buffer
       :desc "Switch buffer"           "<"  #'switch-to-buffer
+      :desc "Switch project"          ">"  #'projectile-switch-project
 
       :desc "Search from here"      "?"    #'counsel-rg
       ;:desc "Find word in project"  "*"    #'counsel-projectile-rg-region-or-symbol
