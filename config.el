@@ -66,6 +66,14 @@
 
 ;; two spaces
 (setq js-indent-level 2)
+(setq css-indent-offset 2)
+(setq css-2-offset 2)
+
+(setq
+  web-mode-code-indent-offset 2
+  web-mode-css-indent-offset 2
+  web-mode-markup-indent-offset 2
+  web-mode-sql-indent-offset 2)
 
 ; (setq-default tab-width 2
 ;               c-basic-offset 2
@@ -120,3 +128,7 @@
 (defun bmacs/jump-definition-other-window ()
   (interactive)
   (bmacs/jump-definition t))
+
+(setq-default ivy-read-action-function #'ivy-hydra-read-action)
+
+(setq tide-format-options '(:IndentSize 2 :tabSize 2))
