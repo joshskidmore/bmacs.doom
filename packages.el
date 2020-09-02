@@ -4,3 +4,4 @@
 (package! evil-iedit-state)
 (package! evil-commentary)
 (package! play-routes-mode)
+(package! deadgrep)

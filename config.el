@@ -132,3 +132,5 @@
 (setq-default ivy-read-action-function #'ivy-hydra-read-action)
 
 (setq tide-format-options '(:IndentSize 2 :tabSize 2))
+
+(global-set-key (kbd "<f5>") #'deadgrep)

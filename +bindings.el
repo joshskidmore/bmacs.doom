@@ -369,7 +369,8 @@
       (:prefix ("s" . "search")
         :desc "IEdit mode"                    :nv "e" #'evil-iedit-state/iedit-mode
         :desc "Swiper search"                 :nv "s" #'swiper
-        :desc "Swiper open buffers"           :nv "a" #'swiper-all)
+        :desc "Swiper open buffers"           :nv "a" #'swiper-all
+        :desc "dumb-jump"                     :nv "d" #'dumb-jump-quick-look)
 
       (:prefix ("t" . "toggle")
         :desc "Flyspell"                     "s" #'flyspell-mode
