@@ -1,6 +1,7 @@
 ;;; private/gilbertw1/config.el -*- lexical-binding: t; -*-
 
-(setq doom-font (font-spec :family "SF Mono" :size 20))
+; (setq doom-font (font-spec :family "SF Mono" :size 20))
+(setq doom-font (font-spec :family "Fira Code Retina" :size 20))
 
 ;; disable double buffering to prevent stuttering
 (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
@@ -57,12 +58,13 @@
 (setq company-idle-delay 0.4)
 
 ;; black background
-(custom-set-faces
-  '(default                 ((t (:background "#0c0c0c"))))
-  '(solaire-default-face    ((t (:background "#0c0c0c")))))
+; (custom-set-faces
+;   '(default                 ((t (:background "#0c0c0c"))))
+;   '(solaire-default-face    ((t (:background "#0c0c0c")))))
 
 ;; theme
-(setq doom-theme 'doom-peacock)
+; (setq doom-theme 'doom-peacock)
+(setq doom-theme 'doom-flatwhite)
 
 ;; two spaces
 (setq js-indent-level 2)
@@ -134,3 +136,35 @@
 (setq tide-format-options '(:IndentSize 2 :tabSize 2))
 
 (global-set-key (kbd "<f5>") #'deadgrep)
+
+(when (window-system)
+  (set-frame-font "Fira Code"))
+(let ((alist '((33 . ".\\(?:\\(?:==\\|!!\\)\\|[!=]\\)")
+               (35 . ".\\(?:###\\|##\\|_(\\|[#(?[_{]\\)")
+               (36 . ".\\(?:>\\)")
+               (37 . ".\\(?:\\(?:%%\\)\\|%\\)")
+               (38 . ".\\(?:\\(?:&&\\)\\|&\\)")
+               (42 . ".\\(?:\\(?:\\*\\*/\\)\\|\\(?:\\*[*/]\\)\\|[*/>]\\)")
+               (43 . ".\\(?:\\(?:\\+\\+\\)\\|[+>]\\)")
+               (45 . ".\\(?:\\(?:-[>-]\\|<<\\|>>\\)\\|[<>}~-]\\)")
+               (46 . ".\\(?:\\(?:\\.[.<]\\)\\|[.=-]\\)")
+               (47 . ".\\(?:\\(?:\\*\\*\\|//\\|==\\)\\|[*/=>]\\)")
+               (48 . ".\\(?:x[a-zA-Z]\\)")
+               (58 . ".\\(?:::\\|[:=]\\)")
+               (59 . ".\\(?:;;\\|;\\)")
+               (60 . ".\\(?:\\(?:!--\\)\\|\\(?:~~\\|->\\|\\$>\\|\\*>\\|\\+>\\|--\\|<[<=-]\\|=[<=>]\\||>\\)\\|[*$+~/<=>|-]\\)")
+               (61 . ".\\(?:\\(?:/=\\|:=\\|<<\\|=[=>]\\|>>\\)\\|[<=>~]\\)")
+               (62 . ".\\(?:\\(?:=>\\|>[=>-]\\)\\|[=>-]\\)")
+               (63 . ".\\(?:\\(\\?\\?\\)\\|[:=?]\\)")
+               (91 . ".\\(?:]\\)")
+               (92 . ".\\(?:\\(?:\\\\\\\\\\)\\|\\\\\\)")
+               (94 . ".\\(?:=\\)")
+               (119 . ".\\(?:ww\\)")
+               (123 . ".\\(?:-\\)")
+               (124 . ".\\(?:\\(?:|[=|]\\)\\|[=>|]\\)")
+               (126 . ".\\(?:~>\\|~~\\|[>=@~-]\\)")
+               )
+             ))
+  (dolist (char-regexp alist)
+    (set-char-table-range composition-function-table (car char-regexp)
+                          `([,(cdr char-regexp) 0 font-shape-gstring]))))
